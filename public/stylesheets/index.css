@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vmax;
+    height: 800px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.navbar li {
+    font-size: 18px;
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: rgb(56, 56, 55);
+    padding: 20px;
+}
+
+.navbar li a:hover {
+    color: #396eeb;
+}
+
+.box1 {
+    width: 50%;
+    height:100%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+
+}
+.box1 h2{
+    margin-top:140px;
+    margin-left: 120px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+.text{
+    margin:60px;
+    margin-top:20px;
+    margin-left: 120px;
+    font-size: 21px;
+}
+.box2 {
+    width: 50%;
+    height: 100%;
+}
+.contaner{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 100%;
+}
+.heder h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* this is button class */
+
+.button{
+    margin-top: -35px;
+    margin-left:130px;
+}
+.btn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #575252;
+    margin: 5px;
+}
+.btn:hover{
+    color:  red;
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+/* this is contaner box which is aredy in box1 */
+.contaner{
+    margin-left: 60px;
+}
+.box2 img{
+    height: 500px;
+    width: 500px;
+    margin-top: 20px;
+}
+
+.contact img{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin: 10px;
+}
+.contact{
+    margin-left: 120px;
+}
