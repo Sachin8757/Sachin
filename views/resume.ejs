@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin</title>
+</head>
+<body>
+    <object data="/pdf/sachin.pdf" type="application/pdf" width="100%" height="700px">
+        <p>It appears you don't have a PDF plugin for this browser.
+        You can <a href="/pdf/sachin.pdf">click here to download the PDF file.</a></p>
+     </object>
+
+
+
+<script src="pdf.js"></script>
+<script src="pdf.worker.js"></script>
+<div id="pdf-container"></div>
+<script>
+   // Specify PDF file path
+   const pdfPath = 'example.pdf';
+
+   // Fetch the PDF document
+   pdfjsLib.getDocument(pdfPath).promise.then(pdf => {
+      // Get the first page of the PDF
+      pdf.getPage(1).then(page => {
+         const scale = 1.5;
+         const viewport = page.getViewport({ scale });
+
+         // Prepare canvas using PDF page dimensions
+         const canvas = document.createElement('canvas');
+         const context = canvas.getContext('2d');
+         canvas.height = viewport.height;
+         canvas.width = viewport.width;
+
+         // Render PDF page into canvas context
+         const renderContext = {
+            canvasContext: context,
+            viewport: viewport
+         };
+         page.render(renderContext).promise.then(() => {
+            // Append canvas to PDF container div
+            document.getElementById('pdf-container').appendChild(canvas);
+         });
+      });
+   });
+</script>
+
+     
+</body>
+</html>

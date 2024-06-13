@@ -55,7 +55,30 @@
 .box2 {
     width: 50%;
     height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
+.pic{
+    /* border: 2px solid red; */
+    width: 450px;
+    height: 450px;
+    box-shadow: 0px 0px 30px rgb(10, 101, 181);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 85px;
+    overflow: hidden;
+    margin-top: -155px;
+}
+.pic img{
+    width: 450px;
+    height: 580px;
+    
+}
+
 .contaner{
     display: flex;
     flex-direction:row;
@@ -89,11 +112,6 @@
 /* this is contaner box which is aredy in box1 */
 .contaner{
     margin-left: 60px;
-}
-.box2 img{
-    height: 500px;
-    width: 500px;
-    margin-top: 20px;
 }
 
 .contact img{
