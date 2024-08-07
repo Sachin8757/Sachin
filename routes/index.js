@@ -17,5 +17,22 @@ router.get('/resume', function(req, res) {
   
 });
 
+router.get('/contact', function(req, res) {
+  // res.render('resume');
+  res.send("work on Progress")
+  
+});
+router.get('/about', function(req, res) {
+  // res.render('resume');
+  res.send("work on Progress")
+});
+
+
+router.get('/skills', function(req, res) {
+  res.render('skills');
+});
+
+
+
 
 module.exports = router;

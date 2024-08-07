@@ -7,7 +7,43 @@
 .main {
     width: 100vmax;
     height: 800px;
+    margin-bottom: 0px;
+    /* color: white; */
 }
+.background{
+    background-color:  rgba(138, 153, 163, 0.5);
+}
+
+.hed {
+    margin-top: 140px;
+    margin-left: 120px;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+
+}
+
+.hed1 {
+    font-size: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+  /* color: white; */
+    /* background-color: red; */
+}
+
+.hed2 {
+    font-size: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* color: yellow; */
+   
+}
+
+
+
+
+
 
 .navbar {
     display: flex;
@@ -31,20 +67,21 @@
 .navbar li a:hover {
     color: #396eeb;
 }
-.line{
+
+.line {
     width: 33px;
     background-color: rgb(31, 28, 28);
     height: 4px;
     margin: 5px 5px;
 }
 
-.burger:hover{
+.burger:hover {
     background-color: rgb(90, 80, 80);
     color: white;
     transition-duration: .5s;
 }
 
-.burger{
+.burger {
     display: none;
     position: absolute;
     cursor: pointer;
@@ -54,24 +91,20 @@
 
 .box1 {
     width: 50%;
-    height:100%;
+    height: 100%;
     display: flex;
     /* align-items: center; */
     flex-direction: column;
 
 }
-.box1 h2{
-    margin-top:140px;
-    margin-left: 120px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
-}
-.text{
-    margin:60px;
-    margin-top:20px;
+
+.text {
+    margin: 60px;
+    margin-top: 20px;
     margin-left: 120px;
     font-size: 21px;
 }
+
 .box2 {
     width: 50%;
     height: 100%;
@@ -79,11 +112,12 @@
     /* justify-content: center; */
     align-items: center;
 }
-.pic{
+
+.pic {
     /* border: 2px solid red; */
     width: 450px;
     height: 450px;
-    box-shadow: 0px 0px 30px rgb(10, 101, 181);
+    box-shadow: 0px 0px 30px rgb(38, 194, 237);
     border-radius: 50%;
     background-color: transparent;
     display: flex;
@@ -93,30 +127,33 @@
     overflow: hidden;
     margin-top: -155px;
 }
-.pic img{
+
+.pic img {
     width: 450px;
     height: 580px;
-    
+
 }
 
-.contaner{
+.contaner {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     width: 100%;
     height: 100%;
 }
-.heder h2{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: rgb(11, 123, 214);
+
+.hed1,
+hed2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* this is button class */
 
-.button{
+.button {
     margin-top: -35px;
-    margin-left:130px;
+    margin-left: 130px;
 }
-.btn{
+
+.btn {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     height: 50px;
@@ -125,155 +162,196 @@
     box-shadow: 0px 0px 10px #575252;
     margin: 5px;
 }
-.btn:hover{
-    color:  red;
+
+.btn:hover {
+    color: red;
     transform: scale(1.1);
     transition-duration: 500ms;
 }
+
 /* this is contaner box which is aredy in box1 */
-.contaner{
+.contaner {
     margin-left: 60px;
 }
 
-.contact img{
+.contact img {
     width: 50px;
     height: 50px;
     margin-top: 20px;
     margin: 10px;
 }
-.contact{
+
+.contact {
     margin-left: 120px;
 }
 
-.contact img:hover{
+.contact img:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
+}
+.foter{
+    /* width: 10vmax; */
+    height: 50px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-@media(max-width:820px){
-      .contaner{
+@media(max-width:820px) {
+    .contaner {
         border: 4px soid red;
         display: flex;
         flex-direction: column-reverse;
         width: 820px;
         margin-left: 0px;
     }
-    .main{
+
+    .main {
         height: 1000px;
         width: 820px;
     }
+
     .pic {
         margin-top: 0px;
-      }
-.box1 h2 {
-  margin-top: 25px;
-  margin-left: 50px;
-  font-size: 50px;
+    }
 
+    .hed {
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+
+    .hed1 {
+        font-size: 50px;
+        color: white;
+    }
+
+    .hed2 {
+        font-size: 50px;
+        color: yellow;
+    }
+
+    .text {
+        margin: 60px;
+        margin-top: 60px;
+        margin-left: 60px;
+        margin-top: 20px;
+        margin-left: 50px;
+        font-size: 21px;
+    }
+
+    .box1 {
+
+        width: 600px;
+    }
+
+    .box2 {
+
+        width: 600px;
+    }
 }
-.text {
-    margin: 60px;
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-top: 20px;
-    margin-left: 50px;
-    font-size: 21px;
-  }
 
-  .box1{
-
-    width: 600px;
-  }
-
-  .box2{
-  
-    width: 600px;
-  }
-}
 @media(max-width:480px) {
-    .nav-list{
+    .nav-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 5px;
-      }
-      .rightnav{
+    }
+
+    .rightnav {
         display: flex;
         flex-direction: column;
 
-      }
-      .navbar{
+    }
+
+    .navbar {
         height: 250px;
         display: flex;
         flex-direction: column;
         transition: all 0.7s ease-out;
-      }
-
-    .pr-text{
-        font-size: 40px;
-      }
-      .burger{
-        display: block;
-      }
-      .h-nav{
-        height: 55px;
-      }
-      .v-class{
-        opacity: 0;
-      }
-    .nav-list li a {
-      padding: none;
-      gap: 5px;
     }
+
+    .pr-text {
+        font-size: 40px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .h-nav {
+        height: 55px;
+    }
+
+    .v-class {
+        opacity: 0;
+    }
+
+    .nav-list li a {
+        padding: none;
+        gap: 5px;
+    }
+
     .nav-list li a {
         text-decoration: none;
         color: rgb(10, 10, 10);
         padding: 20px;
         font-size: 25px;
     }
-    .navbar{
+
+    .navbar {
         margin-left: 70px;
     }
-    .main{
+
+    .main {
         width: 355px;
     }
-    .contaner{
+
+    .contaner {
         display: flex;
-        flex-direction:column-reverse;
-        height:1000px;
-        margin-left:25px;
+        flex-direction: column-reverse;
+        height: 1000px;
+        margin-left: 25px;
         width: 355px;
     }
-    .box1{
+
+    .box1 {
         width: 355px;
     }
-    .box2{
-       
+
+    .box2 {
+
         width: 355px;
         height: 500px;
     }
-    .pic{
+
+    .pic {
         margin: 0px;
         height: 360px;
     }
-  
-    .box1 h2{
+
+    .box1 h2 {
         padding: 0px;
         margin-top: 57px;
         margin-left: 13px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 35px;
-      }
-    .button{
+    }
+
+    .button {
         margin-top: 10px;
         display: flex;
-        margin-left:70px;
+        margin-left: 70px;
     }
-    .text{
+
+    .text {
         margin: 10px;
-      font-size: 22px;
+        font-size: 22px;
     }
-  }
+}
