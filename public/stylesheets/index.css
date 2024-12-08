@@ -11,7 +11,7 @@
     /* color: white; */
 }
 .background{
-    background-color:  rgba(138, 153, 163, 0.5);
+    background-color:white;
 }
 
 .hed {
@@ -115,8 +115,8 @@
 
 .pic {
     /* border: 2px solid red; */
-    width: 450px;
-    height: 450px;
+    width: 377px;
+    height:370px;
     box-shadow: 0px 0px 30px rgb(38, 194, 237);
     border-radius: 50%;
     background-color: transparent;
@@ -129,8 +129,8 @@
 }
 
 .pic img {
-    width: 450px;
-    height: 580px;
+    width: 376px;
+    height: 405px;
 
 }
 
@@ -263,6 +263,9 @@ hed2 {
         align-items: center;
         padding: 5px;
     }
+    .contact {
+        margin-left: 68px;
+      }
 
     .rightnav {
         display: flex;
@@ -339,7 +342,7 @@ hed2 {
     .box1 h2 {
         padding: 0px;
         margin-top: 57px;
-        margin-left: 13px;
+        margin-left:-44px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 35px;
     }
