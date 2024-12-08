@@ -7,8 +7,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/project', function(req, res) {
-  // res.render('index');
-  res.send("this page is under creating")
+  res.render('project');
   
 });
 
