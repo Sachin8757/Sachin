@@ -1,0 +1,73 @@
+.contact{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.contactbox{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 80%;
+ justify-content: center;
+    align-items: center;
+}
+.contaccard{
+    width: 280px;
+    height:360px;
+    margin: 20px;
+    box-shadow: 0px 0px 5px white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.input{
+    background-color: transparent;
+    margin: 10px;
+    width: 228px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 22px;
+}
+.textarea{
+    height:70px;
+}
+.submitbtn{
+    font-size: 18px;
+    margin-left:100px;
+    width: 85px;
+    height: 40px;
+    background-color: #63c2df;
+    border-radius: 10px;
+}
+.contaciocon{
+    /* width: 50%; */
+    height:300px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.contacticon{
+    color: white;
+    font-size: 30px;
+}
+.conicon{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.conword{
+    margin-left: 25px;
+}
