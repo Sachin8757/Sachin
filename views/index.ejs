@@ -87,11 +87,18 @@
       <h1 class="edfont">My Education Life</h1>
       <div class="education">
         <div class="edbox1">
-          <button class="edbtn">10th</button>
-          <button class="edbtn">12th</button>
-          <button class="edbtn">BCA</button>
+          
+          <button class="edbtn font_color font" id="btn10">10th</button>
+          <button class="edbtn font_color font" id="btn12">12th</button>
+          <button class="edbtn font_color font" id="btnBCA">BCA</button>
+    
         </div>
-        <div class="edbox2"></div>
+        <div class="edbox2">
+          <div class="edubox1" id="edubox1">Data for 10th</div>
+          <div class="edubox2" id="edubox2">Data for 12th</div>
+          <div class="edubox3" id="edubox3">Data for BCA</div>
+    
+        </div>
       </div>
     </div>
 <!-- service -->
@@ -180,6 +187,31 @@
   </div>
 
   <script src="/javascripts/mainjs.js"></script>
+  
+<script>
+  // Get the buttons and divs
+  const btn10 = document.getElementById("btn10");
+  const btn12 = document.getElementById("btn12");
+  const btnBCA = document.getElementById("btnBCA");
+  const edubox1 = document.getElementById("edubox1");
+  const edubox2 = document.getElementById("edubox2");
+  const edubox3 = document.getElementById("edubox3");
+
+  // Function to show the selected div and hide the others
+  function showDiv(selectedDiv) {
+    edubox1.style.display = "none";
+    edubox2.style.display = "none";
+    edubox3.style.display = "none";
+
+    selectedDiv.style.display = "block";
+  }
+
+  // Add event listeners to buttons
+  btn10.addEventListener("click", () => showDiv(edubox1));
+  btn12.addEventListener("click", () => showDiv(edubox2));
+  btnBCA.addEventListener("click", () => showDiv(edubox3));
+</script>
+
 </body>
 
 </html>

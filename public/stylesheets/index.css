@@ -181,10 +181,14 @@ hed2 {
 .btn{
     margin-left: 120px;
     width: 100px;
-    height:50px;
+    height: 50px;
     border-radius: 25px;
     font-size: 15px;
-    box-shadow: 0px 0px 2px 2px #396eeb;
+    box-shadow: 0px 0px 10px #5b8dff;
+    background-color: transparent;
+    color: wheat;
+    font-weight: bold;
+    border: none;
 }
 .foter{
     /* width: 10vmax; */
@@ -206,7 +210,6 @@ hed2 {
     }
 
     .main {
-        height: 1000px;
         width: 820px;
     }
 
