@@ -70,7 +70,8 @@
 .navbar li a {
     text-decoration: none;
     color: rgb(138, 163, 211);
-    padding: 20px;
+    /* padding: 20px; */
+    margin: 20px;
 }
 
 .navbar li a:hover {
@@ -202,11 +203,10 @@ hed2 {
 }
 @media(max-width:820px) {
     .contaner {
-        border: 4px soid red;
         display: flex;
         flex-direction: column-reverse;
         width: 820px;
-        margin-left: 0px;
+        margin-left: 130px;
     }
 
     .main {
@@ -249,6 +249,9 @@ hed2 {
     .box2 {
 
         width: 600px;
+    }
+    .navbar {
+        width: 80%;
     }
 }
 
@@ -301,13 +304,11 @@ hed2 {
     .nav-list li a {
         text-decoration: none;
         color: rgb(138, 163, 211);
-        padding: 20px;
         font-size: 25px;
     }
-
     .navbar {
-        margin-left: 70px;
-    }
+        margin-left: 40px;
+      }
 
     .main {
         width: 355px;
@@ -346,4 +347,11 @@ hed2 {
         margin: 10px;
         font-size: 22px;
     }
+    .btn{
+        margin-left: 36px;
+    }
+    .iconcontact {
+        margin-left: 65px;
+        margin-top: 0px;
+      }
 }

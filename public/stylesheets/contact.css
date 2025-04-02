@@ -73,3 +73,21 @@
 .conword{
     margin-left: 25px;
 }
+
+@media(max-width:480px) {
+.contactbox{
+    flex-direction: column;
+}
+/* .contaccard{
+    margin-left: -50px;
+}
+.contaciocon{
+    margin-left: -50px;
+} */
+.contact{
+    margin-left:20px;
+}
+.contaciocon{
+    height: 120px;
+}
+}
