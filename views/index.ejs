@@ -81,29 +81,84 @@
         </div>
       </div>
     </div>
-<!-- education part -->
+    <!-- education part -->
     <div class="edu" id="education">
       <h4 class="font font_color edfont">Education</h4>
       <h1 class="edfont">My Education Life</h1>
       <div class="education">
         <div class="edbox1">
-          
-          <button class="edbtn font_color font shadow1" id="btn10">10th</button>
-          <button class="edbtn font_color font shadow2" id="btn12">12th</button>
-          <button class="edbtn font_color font shadow3" id="btnBCA">BCA</button>
-    
+
+          <button class="edbtn font_color font shadow1" id="btn10">10th click</button>
+          <button class="edbtn font_color font shadow2" id="btn12">12th click</button>
+          <button class="edbtn font_color font shadow3" id="btnBCA">BCA click</button>
+
         </div>
         <div class="edbox2">
           <div class="edubox1" id="edubox1">
-            <h4 class="font">SCHOOL:- 'DAV High School  Gopalganj'</h4>
+            <table>
+              <tr>
+                <th>SCHOOL</th>
+                <td>DAV High School Gopalganj</td>
+              </tr>
+              <tr>
+                <th>Session</th>
+                <td>2018 - 2020</td>
+              </tr>
+              <tr>
+                <th>Marks</th>
+                <td>387</td>
+              </tr>
+              <tr>
+                <th>Percentage</th>
+                <td>77.4%</td>
+              </tr>
+            </table>
+
           </div>
-          <div class="edubox2" id="edubox2">Data for 12th</div>
-          <div class="edubox3" id="edubox3">Data for BCA</div>
-    
+          <div class="edubox2" id="edubox2">
+            <table>
+              <tr>
+                <th>SCHOOL</th>
+                <td>Kamla Ray college Gopalganj</td>
+              </tr>
+              <tr>
+                <th>Session</th>
+                <td>2020 - 2022</td>
+              </tr>
+              <tr>
+                <th>Marks</th>
+                <td>354</td>
+              </tr>
+              <tr>
+                <th>Percentage</th>
+                <td>70.8%</td>
+              </tr>
+            </table>
+          </div>
+          <div class="edubox3" id="edubox3">
+            <table>
+            <tr>
+              <th>SCHOOL</th>
+              <td>MMHA&PU PATNA</td>
+            </tr>
+            <tr>
+              <th>Session</th>
+              <td>2022 - 2025</td>
+            </tr>
+            <tr>
+              <th>Marks</th>
+              <td>Pursuing</td>
+            </tr>
+            <tr>
+              <th>Percentage</th>
+              <td>Pursuing</td>
+            </tr>
+          </table></div>
+
         </div>
       </div>
     </div>
-<!-- service -->
+    <!-- service -->
     <div class="feature " id="service">
       <h4 class="font font_color edfont">Service</h4>
       <div class="card">
@@ -122,15 +177,16 @@
       </div>
 
     </div>
-<!-- about part -->
+    <!-- about part -->
     <div class="about " id="about">
       <h4 class="font font_color edfont">About</h4>
       <h1 class="edfont">Sachin kumar</h1>
       <div class="aboutbox">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, maiores labore placeat error quo quos quod, vel odio, vitae rerum vero rem eveniet. Velit, esse voluptas quisquam optio eaque dolorum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, maiores labore placeat error quo quos quod,
+          vel odio, vitae rerum vero rem eveniet. Velit, esse voluptas quisquam optio eaque dolorum.</p>
       </div>
     </div>
-<!-- contact part -->
+    <!-- contact part -->
     <div class="contact " id="contact">
       <h4 class="font font_color edfont">contact Me</h4>
       <div class="contactbox">
@@ -180,7 +236,7 @@
         </div>
       </div>
     </div>
-<!-- footer -->
+    <!-- footer -->
     <footer class="foter">
       <p class="text-footer">
         copyright &copy; 2025 www.sachin-o8w0.onrender.com- All rights reserved
@@ -189,30 +245,30 @@
   </div>
 
   <script src="/javascripts/mainjs.js"></script>
-  
-<script>
-  // Get the buttons and divs
-  const btn10 = document.getElementById("btn10");
-  const btn12 = document.getElementById("btn12");
-  const btnBCA = document.getElementById("btnBCA");
-  const edubox1 = document.getElementById("edubox1");
-  const edubox2 = document.getElementById("edubox2");
-  const edubox3 = document.getElementById("edubox3");
 
-  // Function to show the selected div and hide the others
-  function showDiv(selectedDiv) {
-    edubox1.style.display = "none";
-    edubox2.style.display = "none";
-    edubox3.style.display = "none";
+  <script>
+    // Get the buttons and divs
+    const btn10 = document.getElementById("btn10");
+    const btn12 = document.getElementById("btn12");
+    const btnBCA = document.getElementById("btnBCA");
+    const edubox1 = document.getElementById("edubox1");
+    const edubox2 = document.getElementById("edubox2");
+    const edubox3 = document.getElementById("edubox3");
 
-    selectedDiv.style.display = "block";
-  }
+    // Function to show the selected div and hide the others
+    function showDiv(selectedDiv) {
+      edubox1.style.display = "none";
+      edubox2.style.display = "none";
+      edubox3.style.display = "none";
 
-  // Add event listeners to buttons
-  btn10.addEventListener("click", () => showDiv(edubox1));
-  btn12.addEventListener("click", () => showDiv(edubox2));
-  btnBCA.addEventListener("click", () => showDiv(edubox3));
-</script>
+      selectedDiv.style.display = "block";
+    }
+
+    // Add event listeners to buttons
+    btn10.addEventListener("click", () => showDiv(edubox1));
+    btn12.addEventListener("click", () => showDiv(edubox2));
+    btnBCA.addEventListener("click", () => showDiv(edubox3));
+  </script>
 
 </body>
 
