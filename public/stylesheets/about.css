@@ -13,11 +13,17 @@
     width: 50%;
     height: 100%;
     padding: 10px;
-    border: 2px solid red;
+}
+.abouttext{
+    font-size: 20px;
 }
 
 @media(max-width:480px) {
     .about{
         margin-top: 0px;
+    }
+    .aboutbox {
+        width: 100%;
+        height: 100%;
     }
 }
