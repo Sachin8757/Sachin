@@ -26,10 +26,10 @@ body {
 }
 
 .heder {
-    color: #396eeb;
+    color: #b1c3ee;
     margin-left: 5px;
-    margin-top: 1px;
-    font-size: 30px;
+    margin-top: 10px;
+    font-size: 20px;
     margin-bottom: 0px;
 }
 
@@ -45,7 +45,7 @@ body {
     align-items: center;
     font-size: 20px;
     margin-left: 18px;
-    color: #396eeb;
+    color: #a2beff;
 }
 
 .buttom {
