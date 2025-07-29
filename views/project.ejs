@@ -10,49 +10,19 @@
 
 <body>
     <div class="main">
+
+        <a class="addproject" href="/addproject">Add projects</a>
         <div class="box">
+        <% projects.forEach(function(project) { %>
             <div class="card">
-                <img src="/images/dsa.jpg" alt="" class="pic">
-                <h2 class="heder">100 Days DSA</h2>
+                <img src="<%= project.image%>" alt="" class="pic">
+                <h2 class="heder"><%= project.title %></h2>
                 <div class="buttom">
-                    <a href="https://github.com/Sachin8757/100-Day-DSA-Challenge" class="subheder">gitHub</a>
+                    <a href="<%= project.github%>" class="subheder">gitHub</a>
+                    <a href="<%= project.live %>" class="subheder">live Project</a>
                 </div>
-        
             </div>
-            <div class="card">
-                <img src="/images/wandlust.jpg" alt="" class="pic">
-                <h2 class="heder">Wandlust</h2>
-                <div class="buttom">
-                    <a href="https://github.com/Sachin8757/wanderlust" class="subheder">gitHub</a>
-                    <a href="https://wanderlust-wahm.onrender.com" class="subheder">live Project</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <img src="/images/explorehub.webp" alt="" class="pic">
-                <h2 class="heder">ExploreHub</h2>
-                <div class="buttom">
-                    <a href="https://github.com/Sachin8757/ExploreHub" class="subheder">gitHub</a>
-                    <a href="https://explorehub-pffi.onrender.com" class="subheder">live Project</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <img src="/images/pathsala.jpg" alt="" class="pic">
-                <h2 class="heder">Paathshala</h2>
-                <div class="buttom">
-                    <a href="https://github.com/Sachin8757/pathshala" class="subheder">gitHub</a>
-                    <a href="https://pathshala-tooo.onrender.com" class="subheder">live Project</a>
-                </div>
-
-            </div>
-            <div class="card">
-                <img src="/images/foodfashion.jpg" alt="" class="pic">
-                <h2 class="heder">foodfashion</h2>
-                <div class="buttom">
-                    <a href="https://github.com/Sachin8757/foodfashion" class="subheder">gitHub</a>
-                    <a href="https://foodfashion.onrender.com" class="subheder">live Project</a>
-                </div>
+        <% }); %>
 
             </div>
 
