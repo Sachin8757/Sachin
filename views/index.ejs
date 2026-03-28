@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/stylesheets/education.css">
-  <link rel="stylesheet" href="/stylesheets/about.css">
-  <link rel="stylesheet" href="stylesheets/feture.css">
-  <link rel="stylesheet" href="/stylesheets/contact.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/feture.css">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+    <link rel="stylesheet" href="/stylesheets/education.css">
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+    <link rel="stylesheet" href="/stylesheets/project.css">
   <title>Sachin</title>
 </head>
 
 <body class="background">
 
   <div class="main">
-    <h2 class="font font_color hedname">Web Developer</h2>
     <nav class="navbar h-nav">
       <ul class="navbar nav-list v-class">
         <li><a href="/">Home</a></li>
@@ -45,8 +45,11 @@
         </div>
         <div class="text">
           <p class="font font_color ">Coder | Developer | UI / UX Designer</p>
-          <p class="font">Pursuing BCA(Bachelor of Computer Applications) @ Maulana Mazharul Haque Arabic and Persian
-            University patna |C++ , Nodejs, Computer Network , DBMS , DSA</p>
+          <p class="font">A motivated BCA student and
+            aspiring full-stack developer with strong skills in C++, DSA, 
+            and Node.js. Passionate about building efficient, scalable, and 
+            user-friendly applications with a focus on clean design and performance.
+          </p>
         </div>
 
         <div class="iconcontact">
@@ -56,17 +59,17 @@
             </a>
           </div>
           <div class="icon">
-            <a href="https://www.linkedin.com/in/sachin-kumar-187865302">
+            <a href="https://www.linkedin.com/in/sachin-kumar-187865302?utm_source=share_via&utm_content=profile&utm_medium=member_android">
               <i class="fa-brands fa-linkedin"></i>
             </a>
           </div>
           <div class="icon">
-            <a href="https://www.instagram.com/me.sachin____?igsh=MWh2aTFibXQ4Y2gxdA==&utm_source=ig_contact_invite">
+            <a href="https://www.instagram.com/_alex.sachin_?igsh=MWFvdnhyMDRycnRzMA==">
               <i class="fa-brands fa-instagram"></i></a>
-            <a href="/project">
-              <button class="font btn">My projects</button>
-            </a>
-
+          </div>
+          <div class="icon">
+            <a href="https://x.com/SachinKuma41150">
+              <i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
 
@@ -77,91 +80,53 @@
         </div>
       </div>
     </div>
+
+    <!-- project section -->
+    <section class="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-container" id="projectContainer"></div>
+    </section>
+
+
     <!-- education part -->
-    <div class="edu" id="education">
-      <h4 class="font font_color edfont">Education</h4>
-      <h1 class="edfont">My Education Life</h1>
-      <div class="education">
-        <div class="edbox1">
-
-          <button class="edbtn font_color font shadow1" id="btn10">10th</button>
-          <button class="edbtn font_color font shadow2" id="btn12">12th</button>
-          <button class="edbtn font_color font shadow3" id="btnBCA">BCA</button>
-
-        </div>
-        <div class="edbox2">
-          <div class="edubox1" id="edubox1">
-            <table>
-              <tr>
-                <th class="font_color">SCHOOL</th>
-                <td>DAV High School Gopalganj</td>
-              </tr>
-              <tr>
-                <th class="font_color">Session</th>
-                <td>2018 - 2020</td>
-              </tr>
-              <tr>
-                <th class="font_color">Marks</th>
-                <td>387</td>
-              </tr>
-              <tr>
-                <th class="font_color">Percentage</th>
-                <td>77.4%</td>
-              </tr>
-            </table>
-
-          </div>
-          <div class="edubox2" id="edubox2">
-            <table>
-              <tr>
-                <th class="font_color">SCHOOL</th>
-                <td>Kamla Ray college Gopalganj</td>
-              </tr>
-              <tr>
-                <th class="font_color">Session</th>
-                <td>2020 - 2022</td>
-              </tr>
-              <tr>
-                <th class="font_color">Marks</th>
-                <td>354</td>
-              </tr>
-              <tr>
-                <th class="font_color">Percentage</th>
-                <td>70.8%</td>
-              </tr>
-            </table>
-          </div>
-          <div class="edubox3" id="edubox3">
-            <table>
-              <tr>
-                <th class="font_color">SCHOOL</th>
-                <td>MMHA&PU PATNA</td>
-              </tr>
-              <tr>
-                <th class="font_color">Session</th>
-                <td>2022 - 2025</td>
-              </tr>
-              <tr>
-                <th class="font_color">Marks</th>
-                <td>Pursuing</td>
-              </tr>
-              <tr>
-                <th class="font_color">Percentage</th>
-                <td>Pursuing</td>
-              </tr>
-            </table>
-          </div>
-
-        </div>
-      </div>
+<!-- ----------------- QUALIFICATIONS ----------------- -->
+<div class="qualification-section" id="education">
+  <h2 class="section-title">My Qualifications</h2>
+  <div class="qualification-cards">
+    
+        <!-- BCA Qualification -->
+    <div class="qualification-card">
+      <h3>BCA</h3>
+      <p><strong>College:</strong> MMHA&PU Patna</p>
+      <p><strong>Session:</strong> 2022 - 2025</p>
+      <p><strong>Marks:</strong> 79.58%</p>
     </div>
+    <!-- 12th Qualification -->
+    <div class="qualification-card">
+      <h3>12th Grade</h3>
+      <p><strong>School:</strong> Kamla Ray College Gopalganj</p>
+      <p><strong>Session:</strong> 2020 - 2022</p>
+      <p><strong>Marks:</strong> 354</p>
+      <p><strong>Percentage:</strong> 70.8%</p>
+    </div>
+    <!-- 10th Qualification -->
+    <div class="qualification-card">
+      <h3>10th Grade</h3>
+      <p><strong>School:</strong> DAV High School Gopalganj</p>
+      <p><strong>Session:</strong> 2018 - 2020</p>
+      <p><strong>Marks:</strong> 387</p>
+      <p><strong>Percentage:</strong> 77.4%</p>
+    </div>
+
+  </div>
+</div>
     <!-- service -->
     <div class="feature " id="service">
-      <h4 class="font font_color edfont">Service</h4>
+      <h4 class="font  section-title">Service</h4>
       <div class="card">
         <div class="feture1 ">
           <i class="fa-solid fa-code fetureicon"></i>
-          <h2 class="font font_color">Coder</h4>
+          <h2 class="font ">Coder</h4>
         </div>
         <div class="feature2">
           <i class="fa-solid fa-code fetureicon"></i>
@@ -169,15 +134,15 @@
         </div>
         <div class="feture1">
           <i class="fa-solid fa-square-plus fetureicon"></i>
-          <h2 class="font font_color">Creative Design</h4>
+          <h2 class="font ">Creative Design</h4>
         </div>
       </div>
 
     </div>
     <!-- about part -->
     <div class="about " id="about">
-      <h4 class="font font_color edfont">About</h4>
-      <h1 class="edfont">Sachin kumar</h1>
+      <h4 class="font  section-title">About</h4>
+      <h3 class="edfont">Sachin kumar</h3>
       <div class="aboutbox">
         <p class="font abouttext">Hi, I'm Sachin Kumar, a passionate and motivated full-stack web developer with a
           strong foundation in C++, data structures and algorithms (DSA), and object-oriented programming (OOP). I'm
@@ -194,44 +159,7 @@
     </div>
     <!-- contact part -->
     <div class="contact " id="contact">
-      <h4 class="font font_color edfont">contact Me</h4>
-      <div class="contactbox">
-
-        <div class="contaciocon">
-
-          <div class="conicon">
-            <div class="cicon">
-              <i class="fa-solid fa-location-dot contacticon"></i>
-            </div>
-            <div class="conword">
-              <h3>Location</h3>
-              <p class="font_color">Bahora tola Gopalganj 841428</p>
-            </div>
-          </div>
-
-          <div class="conicon">
-            <div class="cicon">
-              <i class="fa-solid fa-paper-plane contacticon"></i>
-            </div>
-            <div class="conword">
-              <h3>Email</h3>
-              <p class="font_color">sachin875788@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="conicon">
-            <div class="cicon">
-              <i class="fa-solid fa-phone contacticon"></i>
-            </div>
-            <div class="conword">
-              <h3>Call</h3>
-              <p class="font_color">8757887103</p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- contact card -->
+      <h4 class="font section-title">Contact Me</h4>
         <div class="contaccard">
           <form action="/contact" method="post">
             <input type="text" name="namee" placeholder="Name" class="input font_color" required>
@@ -247,37 +175,17 @@
       <p class="text-footer">
         copyright &copy; 2025 www.sachin-o8w0.onrender.com- All rights reserved
       </p>
-      <a href="/addproject">.</a>
-      
     </footer>
   </div>
-
-  <script src="/javascripts/mainjs.js"></script>
-
   <script>
-    // Get the buttons and divs
-    const btn10 = document.getElementById("btn10");
-    const btn12 = document.getElementById("btn12");
-    const btnBCA = document.getElementById("btnBCA");
-    const edubox1 = document.getElementById("edubox1");
-    const edubox2 = document.getElementById("edubox2");
-    const edubox3 = document.getElementById("edubox3");
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-list");
 
-    // Function to show the selected div and hide the others
-    function showDiv(selectedDiv) {
-      edubox1.style.display = "none";
-      edubox2.style.display = "none";
-      edubox3.style.display = "none";
-
-      selectedDiv.style.display = "block";
-    }
-
-    // Add event listeners to buttons
-    btn10.addEventListener("click", () => showDiv(edubox1));
-    btn12.addEventListener("click", () => showDiv(edubox2));
-    btnBCA.addEventListener("click", () => showDiv(edubox3));
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+  });
   </script>
-
+  <script src="/javascripts/mainjs.js"></script>
 </body>
 
 </html>

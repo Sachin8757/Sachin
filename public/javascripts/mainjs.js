@@ -1,10 +1,41 @@
-burger=document.querySelector('.burger')
-navbar=document.querySelector('.navbar')
-rightNav=document.querySelector('.rightnav')
-navList=document.querySelector('.nav-list')
+const projects = [
+  {
+    title: "Explore Hub Platform",
+    desc: "A modern platform to explore places with responsive UI.",
+    image:"./images/explorehub.webp",
+    live: "https://explorehub-225b.onrender.com/",
+    code: "https://github.com/Sachin8757/ExploreHub"
+  },
+  // {
+  //   title: "Portfolio Website",
+  //   desc: "Personal portfolio to showcase skills and projects.",
+  //   image: "/images/wandlust.png",
+  //   live: "#",
+  //   code: "#"
+  // },
+  // {
+  //   title: "Todo App with Node.js",
+  //   desc: "Task manager with CRUD operations using backend.",
+  //   image: "/images/pathsala.png",
+  //   live: "#",
+  //   code: "#"
+  // }
+];
 
-burger.addEventListener('click',()=>{
-    navList.classList.toggle('v-class');
-    navbar.classList.toggle('h-nav');
-    rightNav.classList.toggle('v-class');
-})
+const container = document.getElementById("projectContainer");
+projects.forEach(project => {
+  const card = `
+    <div class="project-card">
+      <img src="${project.image}" alt="project">
+      <div class="project-content">
+        <h3>${project.title}</h3>
+        <p>${project.desc}</p>
+        <div class="project-links">
+          <a href="${project.live}" target="_blank">Live</a>
+          <a href="${project.code}" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+  `;
+  container.innerHTML += card;
+});
