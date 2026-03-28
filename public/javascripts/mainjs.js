@@ -9,14 +9,7 @@ const projects = [
   // {
   //   title: "Portfolio Website",
   //   desc: "Personal portfolio to showcase skills and projects.",
-  //   image: "/images/wandlust.png",
-  //   live: "#",
-  //   code: "#"
-  // },
-  // {
-  //   title: "Todo App with Node.js",
-  //   desc: "Task manager with CRUD operations using backend.",
-  //   image: "/images/pathsala.png",
+  //   image: "/images/pathsala.jpg",
   //   live: "#",
   //   code: "#"
   // }
