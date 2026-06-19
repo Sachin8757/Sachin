@@ -31,7 +31,7 @@ app.post('/contact', function (req, res) {
   res.redirect('/');
 });
 
-app.get('/queries', (req, res) => {
+app.get('/show', (req, res) => {
   res.json(contactQueries);
 });
 

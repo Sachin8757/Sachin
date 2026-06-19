@@ -34,3 +34,27 @@
 .contaciocon{
   display: flex;
 }
+
+.textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+
+/* 🔹 TABLET */
+/* @media (max-width: 768px) {
+width: 500px;
+
+}
+
+/* 🔹 MOBILE */
+@media (max-width: 500px) {
+.textarea{
+  width: 245px;
+}
+} */
