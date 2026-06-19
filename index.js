@@ -1,48 +1,40 @@
 require('dotenv').config();
 var express = require('express');
 var app = express();
-var nodemailer = require('nodemailer')
-const path = require('path')
+const path = require('path');
 
 const port = process.env.PORT || 3000;
-// view engine setup
+
+const contactQueries = [];
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.get('/', function (req, res) {
   res.render('index');
-
 });
 
 app.post('/contact', function (req, res) {
   let { namee, email, yourtext } = req.body;
-  console.log(namee, email, yourtext);
-  // var transporter=nodemailer.createTransport({
-  //   service:"gmail",
-  //   auth:{
-  //     user:'sachin875788@gmail.com ',
-  //     pass:'sdzc exvn dnsc edgp'
-  //   }
-  // });
-  // var mailOption={
-  //   form:email,
-  //   to:'sachin875788@gmail.com',
-  //   subject:email,
-  //   text:yourtext
-  // }
-  // transporter.sendMail(mailOption,function(error,info){
-  //   if(error){
-  //     console.log(error);
-  //   }else{
-  //     console.log("email send")
-  //   }
-  //   res.redirect("/")
-  // })
 
+  contactQueries.push({
+    name: namee,
+    email: email,
+    message: yourtext,
+    date: new Date()
+  });
 
+  res.redirect('/');
 });
+
+app.get('/queries', (req, res) => {
+  res.json(contactQueries);
+});
+
 app.listen(port, () => {
-  console.log("app rungin...")
-})
+  console.log("app running...");
+});
