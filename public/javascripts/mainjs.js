@@ -3,7 +3,7 @@ const projects = [
     title: "Explore Hub Platform",
     desc: "A modern platform to explore places with responsive UI.",
     image:"./images/explorehub.webp",
-    live: "https://explorehub-225b.onrender.com/",
+    live: "https://explorehub-ten.vercel.app/",
     code: "https://github.com/Sachin8757/ExploreHub"
   },
   // {
