@@ -2,195 +2,414 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <link rel="stylesheet" href="/stylesheets/feture.css">
-    <link rel="stylesheet" href="/stylesheets/about.css">
-    <link rel="stylesheet" href="/stylesheets/education.css">
-    <link rel="stylesheet" href="/stylesheets/contact.css">
-    <link rel="stylesheet" href="/stylesheets/project.css">
-  <title>Sachin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+    <!-- <link rel="manifest" href="assets/favicon/site.webmanifest"> -->
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Sachin Kumar</title>
 </head>
 
-<body class="background">
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#home" class="nav__logo">Sachin's Portfolio</a>
+            </div>
 
-  <div class="main">
-    <nav class="navbar h-nav">
-      <ul class="navbar nav-list v-class">
-        <li><a href="/">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link ">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <!-- <li class="nav__item"><a href="#certification" class="nav__link">Certification</a></li> -->
+                    <!-- <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li> -->
+                    <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
 
-      <div class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </nav>
-    <div class="contaner">
-      <div class="box1">
-        <div class="hed">
-          <div class="inline-paragraphs">
-            <p>I am</p>
-            <p class="font font_color">Sachin kumar</p>
-          </div>
+            <button id="theme-toggle" class="nav__theme" type="button" aria-label="Toggle light and dark mode">
+                <i class='bx bx-moon'></i>
+            </button>
 
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sachin</span><br>
+                    <span class="text sec-text ">Java Full Stack Dev</span><br>
+                </h1>
+                    <p class="home__summary">
+                        Full Stack Web Developer specializing in <strong>React, JavaScript, Node.js, Express.js, MongoDB, and Tailwind CSS</strong>,
+                        with hands-on experience building responsive web applications, RESTful APIs, and database-driven solutions.
+                        I focus on writing clean, scalable code and developing practical solutions to real-world problems.
+                    </p>
+
+
+                <a href="/Pdf/sachinresume.pdf" class="button" target="_blank">Download CV</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/sachin-kumar-187865302" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/_alex.sachin_" class="home__social-icon"><i
+                        class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.github.com/sachin8757" class="home__social-icon"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="50" y="60" href="/images/sachin_pic.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="/images/sachin_pic.png" alt="sachin_kumar">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'm Sachin</h2>
+                    <p class="about__text">I am a Full Stack Web Developer with strong experience in JavaScript,
+                         React, Node.js, Express.js, MongoDB, and modern web technologies. I build responsive and scalable web applications,
+                          RESTful APIs, and database-driven solutions with a focus on clean, practical, and maintainable code.
+                           I also have experience with C++ for DSA and Python for data analysis and automation. I enjoy solving real-world 
+                           problems and continuously improving my development skills by building practical projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-html5 skills__icon'></i>
+                            <span class="skills__name">HTML5</span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-css3 skills__icon'></i>
+                            <span class="skills__name">CSS3</span>
+                        </div>
+                        <div class="skills__bar skills__css">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-javascript skills__icon'></i>
+                            <span class="skills__name">JAVASCRIPT</span>
+                        </div>
+                        <div class="skills__bar skills__js">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-react skills__icon'></i>
+                            <span class="skills__name">REACT JS</span>
+                        </div>
+
+                        <div class="skills__bar skills__reactjs">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-nodejs skills__icon'></i>
+                            <span class="skills__name">NODE JS</span>
+                        </div>
+                        <div class="skills__bar skills__nodejs">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">80%</span>
+                        </div>
+                    </div>
+                    <!-- <div class="skills__data"> -->
+                        <!-- <div class="skills__names">
+                            <i class='bx bxl-angular skills__icon'></i>
+                            <span class="skills__name">ANGULAR</span>
+                        </div> -->
+                        <!-- <div class="skills__bar skills__angular">
+
+                        </div> -->
+                        <!-- <div>
+                            <span class="skills__percentage">75%</span>
+                        </div> -->
+                    <!-- </div> -->
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-java skills__icon'></i>
+                            <span class="skills__name">JAVA</span>
+                        </div>
+                        <div class="skills__bar skills__java">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <!-- <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-spring-boot skills__icon'></i>
+                            <span class="skills__name">SPRING BOOT</span>
+                        </div>
+                        <div class="skills__bar skills__sts">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">75%</span>
+                        </div>
+                    </div> -->
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">UI/UX</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-github skills__icon'></i>
+                            <span class="skills__name">GITHUB</span>
+                        </div>
+                        <div class="skills__bar skills__github">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skills_img">
+                    <img src="/images/work4.jpg" style="margin-bottom: 15px;" alt="Pik not visible" class="skills__img">
+                    <img src="/images/work3.jpg" style="margin-top: 35px;" alt="pik not visible" class="skills__img">
+                </div>
+            </div>
+        </section>
+        <!-- <==================Education=======================> -->
+
+        <section class="about section " id="education">
+            <h2 class="section-title">Education</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img class="education-img" src="/images/MM.webp" style="margin-bottom: 15px;" alt="ankitpandey2 education">
+                    <img class="education-img education-img-secondary" src="/images/education.jpg" style="margin-top: 35px;" alt="education">
+                    
+                </div>
+                <div>
+                    <div class="education-item">
+                        <h3>Bachelor's of Computer Application (B.C.A)</h3>
+                        <p class="education-details">Maulana Mazharul Haque Arabic and Persian University Patna</p>
+                        <p class="education-details">Year: Aug 2022 - Jan 2026</p>
+                        <p class="education-description">Percentage: 79.58% </p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Senior Secondary</h3>
+                        <p class="education-details">Kamla Ray Collage Gopalganj</p>
+                        <p class="education-details">Year: Apr 2021 - Mar 2022</p>
+                        <p class="education-description">Percentage: 70.8%</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>High School</h3>
+                        <p class="education-details">DAV High School Gopalganj</p>
+                        <p class="education-details">Year: Apr 2019 - Mar 2020</p>
+                        <p class="education-description">Percentage: 77.4%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CERTIFICATIONS =====-->
+        <!-- <section class="about section " id="certification">
+            <h2 class="section-title">Certification</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img class="education-img certification-badge-img" src="https://images.credly.com/size/220x220/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob" alt="ankitpandey2 claude certification">
+                </div>
+                <div>
+                    <div class="education-item">
+                        <h3>GitHub Copilot Certification (GH-300)</h3>
+                        <p class="education-details">GitHub</p>
+                        <p class="education-description">Year: 2026</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Claude Certified Developer - Foundations (CCDV-F)</h3>
+                        <p class="education-details">Anthropic</p>
+                        <p class="education-description">Issued: Aug 2026</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Claude Certified Associate - Foundations (CCAO-F)</h3>
+                        <p class="education-details">Anthropic</p>
+                        <p class="education-description">Issued: Jul 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===== Work Experience =====-->
+
+        <!-- <section class="about section " id="work">
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img class="education-img" src="assets/img/Wipro_work.jpg" alt="ankitpandey2 work">
+                </div>
+                <div>
+                    <div class="education-item">
+                        <h3>Java Full Stack Developer</h3>
+                        <p class="education-details"><b>Wipro Limited</b> | Client: National Gas (UK)</p>
+                        <p class="education-details">May 2024 - Present (<span id="experience-years-work" style="font-weight: bold;">2.4 years</span>)</p>
+                        <ul class="experience-list">
+                            <li>Developing and maintaining full stack applications using Java, Spring Boot, Angular, and React.</li>
+                            <li>Designing REST APIs for reliable communication between backend services and frontend clients.</li>
+                            <li>Working with Azure DevOps CI/CD pipelines for build, test, and deployment automation.</li>
+                            <li>Supporting production batch scheduling and execution workflows using Automic.</li>
+                            <li>Participating in DR readiness and cross-functional Agile delivery with onsite teams.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!--=====Personal Projects =====-->
+        <section class="work section" id="project">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="work__container bd-grid">
+                 <a href="https://explorehub-ten.vercel.app/" class="work__img" target="_blank">
+                    <img src="/images/explorehub.webp" alt=" work">
+                </a>
+                <!-- <a href="https://hskenterprises.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/HSK.png" alt="ankitpandey2 work">
+                </a>
+                <a href="https://beautifyyy.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/Beautify.JPG" alt="ankitpandey2 work">
+                </a>
+                <a href="https://socialmediapg.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/socialmedia.png" alt="ankitpandey2 work">
+                </a>
+                <a href="https://medizon.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/Medizone.JPG" alt="ankitpandey2">
+                </a>
+                <a href="https://moviesummary.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/MovieSummary.JPG" alt="ankitpandey2">
+                </a>
+                <a href="https://stackweather.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/stackweather.png" alt="ankitpandey2">
+                </a>
+                <a href="https://itsankitpandey.github.io/TextConverter/" class="work__img" target="_blank">
+                    <img src="assets/img/textConverter.JPG" alt="ankitpandey2">
+                </a>
+                <a href="https://pizzacraze.netlify.app" class="work__img">
+                    <img src="assets/img/PizzaCraze.JPG" alt="ankitpandey2">
+                </a>
+
+                <a href="https://spidersweb.netlify.app" class="work__img" target="_blank">
+                    <img src="assets/img/SpiderWeb.JPG" alt="ankitpandey2">
+                </a> -->
+
+
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="/contact" method="POST" class="contact__form"
+                    onsubmit="return validateForm()">
+                    <input type="text" placeholder="Name" name="name" class="contact__input" required>
+                    <input type="mail" placeholder="Email" name="email" class="contact__input" required>
+                    <textarea name="message" placeholder="Your Message here" id="" cols="0" rows="10"
+                        class="contact__input" required></textarea>
+                    <!-- <input type="button" name="submit" value="Send" class="contact__button button"> -->
+                    <button type="submit" name="submit" class="contact__button button">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Sachin Kumar</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/sachin-kumar-187865302" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.github.com/sachin8757" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a href="mailto:siliconian.sachin@gmail.com" class="footer__icon"><i class='bx bx-envelope'></i></a>
         </div>
-        <div class="text">
-          <p class="font font_color ">Coder | Developer | UI / UX Designer</p>
-          <p class="font">A motivated BCA student and
-            aspiring full-stack developer with strong skills in C++, DSA, 
-            and Node.js. Passionate about building efficient, scalable, and 
-            user-friendly applications with a focus on clean design and performance.
-          </p>
-        </div>
-
-        <div class="iconcontact">
-          <div class="icon">
-            <a href="https://github.com/Sachin8757">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-          <div class="icon">
-            <a href="https://www.linkedin.com/in/sachin-kumar-187865302?utm_source=share_via&utm_content=profile&utm_medium=member_android">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-          <div class="icon">
-            <a href="https://www.instagram.com/_alex.sachin_?igsh=MWFvdnhyMDRycnRzMA==">
-              <i class="fa-brands fa-instagram"></i></a>
-          </div>
-          <div class="icon">
-            <a href="https://x.com/SachinKuma41150">
-              <i class="fa-brands fa-x-twitter"></i></a>
-          </div>
-          <div class="icon">
-            <a href="https://www.youtube.com/@Pathshala-l2j" target="_blank">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-      <div class="box2">
-        <div class="pic">
-          <img src="/images/sachin.png" alt="" class="hh">
-        </div>
-      </div>
-    </div>
-
-    <!-- project section -->
-    <section class="projects">
-      <h2 class="font section-title">My Projects</h2>
-      <div class="project-container" id="projectContainer"></div>
-    </section>
-
-
-    <!-- education part -->
-<!-- ----------------- QUALIFICATIONS ----------------- -->
-<div class="qualification-section" id="education">
-  <h2 class="section-title">My Qualifications</h2>
-  <div class="qualification-cards">
-    
-        <!-- BCA Qualification -->
-    <div class="qualification-card">
-      <h3>BCA</h3>
-      <p><strong>College:</strong> MMHA&PU Patna</p>
-      <p><strong>Session:</strong> 2022 - 2025</p>
-      <p><strong>Marks:</strong> 79.58%</p>
-    </div>
-    <!-- 12th Qualification -->
-    <div class="qualification-card">
-      <h3>12th Grade</h3>
-      <p><strong>School:</strong> Kamla Ray College Gopalganj</p>
-      <p><strong>Session:</strong> 2020 - 2022</p>
-      <p><strong>Marks:</strong> 354</p>
-      <p><strong>Percentage:</strong> 70.8%</p>
-    </div>
-    <!-- 10th Qualification -->
-    <div class="qualification-card">
-      <h3>10th Grade</h3>
-      <p><strong>School:</strong> DAV High School Gopalganj</p>
-      <p><strong>Session:</strong> 2018 - 2020</p>
-      <p><strong>Marks:</strong> 387</p>
-      <p><strong>Percentage:</strong> 77.4%</p>
-    </div>
-
-  </div>
-</div>
-    <!-- service -->
-    <div class="feature " id="service">
-      <h4 class="font  section-title">Service</h4>
-      <div class="card">
-        <div class="feture1 ">
-          <i class="fa-solid fa-code fetureicon"></i>
-          <h2 class="font ">Coder</h4>
-        </div>
-        <div class="feature2">
-          <i class="fa-solid fa-code fetureicon"></i>
-          <h2 class="font ">Web Developer</h4>
-        </div>
-        <div class="feture1">
-          <i class="fa-solid fa-square-plus fetureicon"></i>
-          <h2 class="font ">Creative Design</h4>
-        </div>
-      </div>
-
-    </div>
-    <!-- about part -->
-    <div class="about " id="about">
-      <h4 class="font  section-title">About</h4>
-      <h3 class="edfont">Sachin kumar</h3>
-      <div class="aboutbox">
-        <p class="font abouttext">Hi, I'm Sachin Kumar, a passionate and motivated full-stack web developer with a
-          strong foundation in C++, data structures and algorithms (DSA), and object-oriented programming (OOP). I'm
-          completed a Bachelor of Computer Application (BCA) from Maulana Mazharul Haque Arabic & Persian
-          University in Patna with 79.58%.
-
-          My focus is on building clean, efficient, and user-friendly web applications using modern technologies like
-          HTML, CSS, and Node.js. I've developed projects such as my portfolio website and a travel web app called
-          Wanderlust, which reflect my ability to create responsive and functional user interfaces.
-
-          I'm always eager to learn and take on new challenges that help me grow as a developer and contribute
-          meaningfully to the success of any organization I work with.</p>
-      </div>
-    </div>
-    <!-- contact part -->
-    <div class="contact " id="contact">
-      <h4 class="font section-title">Contact Me</h4>
-        <div class="contaccard">
-          <form action="/contact" method="post">
-            <input type="text" name="namee" placeholder="Name" class="input font_color" required>
-            <input type="text" name="email" placeholder="Email" class="input font_color input" required>
-            <textarea name="yourtext" placeholder="Write Your Query" class="textarea font_color" required></textarea>
-            <button class="submitbtn">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- footer -->
-    <footer class="foter">
-      <p class="text-footer">
-        copyright &copy; 2025 www.sachin-o8w0.onrender.com- All rights reserved
-      </p>
+        <p class="footer__copy">&#169; Sachin Kumar. All rigths reserved</p>
     </footer>
-  </div>
-  <script>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-list");
 
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-  });
-  </script>
-  <script src="/javascripts/mainjs.js"></script>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>  <!-- This is use for scroll reveal effect-->
+
+    <!--===== MAIN JS =====-->
+    <script src="/javascripts/main.js"></script>  <!-- This is use for dark and light mode-->
+
 </body>
 
 </html>
