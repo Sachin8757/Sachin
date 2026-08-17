@@ -69,6 +69,17 @@ app.post("/contact", async (req, res) => {
                 <p>Sent from your portfolio website.</p>
             `
         });
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: `Thank you for contacting me, ${name}`,
+            html: `
+                <p>Dear ${name},</p>
+                <p>Thank you for reaching out to me. I have received your message and will get back to you as soon as possible.</p>
+                <p>Best regards,</p>
+                <p>Sachin Kumar</p>
+            `
+        });
 
         res.redirect("/");
     } catch (error) {

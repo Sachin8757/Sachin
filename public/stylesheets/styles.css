@@ -283,7 +283,7 @@ body[data-theme="dark"] .nav__theme {
 /*===== HOME =====*/
 .home {
   position: relative;
-  row-gap: 5rem;
+  row-gap: 2rem;
   padding: 4rem 0 5rem;
 }
 
@@ -770,7 +770,7 @@ body[data-theme="dark"] .footer__title {
     margin-right: auto;
   }
   .home {
-    padding: 10rem 0 2rem;
+    padding: 7rem 0 2rem;
   }
   .home__img {
     width: 450px;
