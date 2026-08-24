@@ -45,7 +45,6 @@ app.get('/', function (req, res) {
 app.post("/contact", async (req, res) => {
     try {
         const { name, email, message } = req.body;
-
         contactQueries.push({
             name,
             email,
