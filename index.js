@@ -4,6 +4,8 @@ var app = express();
 const path = require('path');
 
 const port = process.env.PORT || 3000;
+const DSAQuestion=require("./model/DSAQuestion.js")
+const connetion=require("./config/connction.js")
 
 const contactQueries = [];
 
@@ -14,9 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 const nodemailer = require("nodemailer");
-
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -25,22 +25,123 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+
 app.get('/', function (req, res) {
   res.render('index');
 });
 
-// app.post('/contact', function (req, res) {
-//   let { name, email, message } = req.body;
+// this page help to add question in my protfolio 
+app.get("/add", (req, res) => {
+    res.render("addDSA.ejs");
+});
 
-//   contactQueries.push({
-//     name: name,
-//     email: email,
-//     message: message,
-//     date: new Date()
-//   });
+app.post("/admin/questions/add", async (req, res) => {
+    try {
+        const {
+            leetcodeNumber,
+            title,
+            difficulty,
+            description,
+            code,
+            language,
+            topics,
+            leetcodeUrl,
+            githubUrl
+        } = req.body;
 
-//   res.redirect('/');
-// });
+        // Convert topics string into array
+        const topicArray = topics
+            ? topics.split(",").map(topic => topic.trim())
+            : [];
+
+        const question = new DSAQuestion({
+            leetcodeNumber,
+            title,
+            difficulty,
+            description,
+            code,
+            language,
+            topics: topicArray,
+            leetcodeUrl,
+            githubUrl
+        });
+
+        await question.save();
+
+        res.redirect("/dsa");
+
+    } catch (error) {
+        console.error("Error adding DSA question:", error);
+
+        res.status(500).send("Failed to add DSA question");
+    }
+});
+
+// this page help to show all solve dsa quetion 
+app.get("/dsa", async (req, res) => {
+    try {
+        const questions = await DSAQuestion
+            .find()
+            .sort({ leetcodeNumber: 1 });
+
+        const total = questions.length;
+
+        const easy = questions.filter(
+            question => question.difficulty === "Easy"
+        ).length;
+
+        const medium = questions.filter(
+            question => question.difficulty === "Medium"
+        ).length;
+
+        const hard = questions.filter(
+            question => question.difficulty === "Hard"
+        ).length;
+
+        res.render("dsa", {
+            questions,
+            total,
+            easy,
+            medium,
+            hard
+        });
+
+    } catch (error) {
+        console.error("Error fetching DSA questions:", error);
+        res.status(500).send("Unable to load DSA questions");
+    }
+});
+
+app.get("/dsa/:id", async (req, res) => {
+    try {
+        const question = await DSAQuestion.findById(req.params.id);
+
+        if (!question) {
+            return res.status(404).send("DSA question not found");
+        }
+
+        res.render("ShowDSA.ejs", {
+            question
+        });
+
+    } catch (error) {
+        console.error("Error fetching DSA question:", error);
+
+        res.status(500).send("Server Error");
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.post("/contact", async (req, res) => {
     try {
@@ -87,9 +188,13 @@ app.post("/contact", async (req, res) => {
     }
 });
 
+
+
 app.get('/show', (req, res) => {
   res.json(contactQueries);
 });
+
+
 
 app.listen(port, () => {
   console.log("app running...");

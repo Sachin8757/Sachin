@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+    <title>Add DSA Question</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0d172e;
+            color: #42409b;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #333;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        #code {
+            min-height: 300px;
+            font-family: Consolas, monospace;
+            line-height: 1.5;
+            background: #1e1e1e;
+            color: #fff;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .topics-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .topic-input {
+            width: auto;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #444;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .help-text {
+            font-size: 13px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 15px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/" class="back-btn">← Back to Dashboard</a>
+
+    <h1>Add DSA Question</h1>
+
+    <form action="/admin/questions/add" method="POST">
+
+        <!-- LeetCode Number + Difficulty -->
+        <div class="row">
+
+            <div class="form-group">
+                <label for="leetcodeNumber">
+                    LeetCode Number
+                </label>
+
+                <input
+                    type="number"
+                    id="leetcodeNumber"
+                    name="leetcodeNumber"
+                    placeholder="Example: 94"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="difficulty">
+                    Difficulty
+                </label>
+
+                <select id="difficulty" name="difficulty" required>
+                    <option value="">Select Difficulty</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <!-- Question Title -->
+        <div class="form-group">
+
+            <label for="title">
+                Question Title
+            </label>
+
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Example: Binary Tree Inorder Traversal"
+                required
+            >
+
+        </div>
+
+
+        <!-- Description -->
+        <div class="form-group">
+
+            <label for="description">
+                Question Description
+            </label>
+
+            <textarea
+                id="description"
+                name="description"
+                placeholder="Enter the problem description..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- Language -->
+        <div class="form-group">
+
+            <label for="language">
+                Programming Language
+            </label>
+
+            <select id="language" name="language" required>
+
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Code -->
+        <div class="form-group">
+
+            <label for="code">
+                Solution Code
+            </label>
+
+            <textarea
+                id="code"
+                name="code"
+                placeholder="Paste your solution code here..."
+                required
+            ></textarea>
+
+            <p class="help-text">
+                Paste your complete solution code.
+            </p>
+
+        </div>
+
+
+        <!-- Topics -->
+        <div class="form-group">
+
+            <label for="topics">
+                Topics
+            </label>
+
+            <input
+                type="text"
+                id="topics"
+                name="topics"
+                placeholder="Example: Array, Hash Table, Two Pointer"
+            >
+
+            <p class="help-text">
+                Separate multiple topics with commas.
+            </p>
+
+        </div>
+
+
+        <!-- LeetCode URL -->
+        <div class="form-group">
+
+            <label for="leetcodeUrl">
+                LeetCode URL
+            </label>
+
+            <input
+                type="url"
+                id="leetcodeUrl"
+                name="leetcodeUrl"
+                placeholder="https://leetcode.com/problems/..."
+            >
+
+        </div>
+
+
+        <!-- GitHub URL -->
+        <div class="form-group">
+
+            <label for="githubUrl">
+                GitHub URL
+            </label>
+
+            <input
+                type="url"
+                id="githubUrl"
+                name="githubUrl"
+                placeholder="https://github.com/..."
+            >
+
+        </div>
+
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn">
+            Add Question
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+    <title>
+        <%= question.title %> | DSA Solution
+    </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0d172e;
+            color: #42409b;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .back-btn:hover {
+            color: #000;
+        }
+
+        /* Header */
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .leetcode-number {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .difficulty {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .easy {
+            background: #e7f8ed;
+            color: #16803c;
+        }
+
+        .medium {
+            background: #fff4dc;
+            color: #a66b00;
+        }
+
+        .hard {
+            background: #ffe5e5;
+            color: #d32f2f;
+        }
+
+        .tag {
+            background: #eeeeee;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* Section */
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        /* Description */
+
+        .description {
+            color: #555;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        /* Code */
+
+        .code-container {
+            position: relative;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #f5f5f5;
+            padding: 22px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            border: none;
+            background: white;
+            color: #222;
+
+            padding: 7px 12px;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background: #ddd;
+        }
+
+        /* Topics */
+
+        .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Links */
+
+        .links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .link-btn {
+            text-decoration: none;
+            background: #222;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+        .link-btn:hover {
+            background: #444;
+        }
+
+        .date {
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 22px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- Back -->
+
+    <a href="/dsa" class="back-btn">
+        ← Back to DSA Problems
+    </a>
+
+
+    <!-- Problem Header -->
+
+    <div class="header">
+
+        <div class="leetcode-number">
+            LeetCode #<%= question.leetcodeNumber %>
+        </div>
+
+
+        <h1>
+            <%= question.title %>
+        </h1>
+
+
+        <div class="meta">
+
+            <span class="difficulty <%= question.difficulty.toLowerCase() %>">
+                <%= question.difficulty %>
+            </span>
+
+
+            <% if (question.language) { %>
+
+                <span class="tag">
+                    <%= question.language %>
+                </span>
+
+            <% } %>
+
+
+            <% if (question.topics) { %>
+
+                <% question.topics.forEach(topic => { %>
+
+                    <span class="tag">
+                        <%= topic %>
+                    </span>
+
+                <% }) %>
+
+            <% } %>
+
+        </div>
+
+    </div>
+
+
+    <!-- Problem Description -->
+
+    <div class="section">
+
+        <h2>
+            Problem Description
+        </h2>
+
+        <p class="description">
+            <%= question.description %>
+        </p>
+
+    </div>
+
+
+    <!-- Solution -->
+
+    <div class="section">
+
+        <h2>
+            Solution
+        </h2>
+
+        <div class="code-container">
+
+            <button
+                class="copy-btn"
+                onclick="copyCode()"
+                id="copyButton"
+            >
+                Copy
+            </button>
+
+
+            <pre id="code"><%= question.code %></pre>
+
+        </div>
+
+    </div>
+
+
+    <!-- Topics -->
+
+    <% if (question.topics && question.topics.length > 0) { %>
+
+        <div class="section">
+
+            <h2>
+                Topics
+            </h2>
+
+            <div class="topics">
+
+                <% question.topics.forEach(topic => { %>
+
+                    <span class="tag">
+                        <%= topic %>
+                    </span>
+
+                <% }) %>
+
+            </div>
+
+        </div>
+
+    <% } %>
+
+
+    <!-- External Links -->
+
+    <% if (question.leetcodeUrl || question.githubUrl) { %>
+
+        <div class="section">
+
+            <h2>
+                Links
+            </h2>
+
+            <div class="links">
+
+                <% if (question.leetcodeUrl) { %>
+
+                    <a
+                        href="<%= question.leetcodeUrl %>"
+                        target="_blank"
+                        class="link-btn"
+                    >
+                        Open on LeetCode ↗
+                    </a>
+
+                <% } %>
+
+
+                <% if (question.githubUrl) { %>
+
+                    <a
+                        href="<%= question.githubUrl %>"
+                        target="_blank"
+                        class="link-btn"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+    <% } %>
+
+
+    <!-- Solved Date -->
+
+    <% if (question.solvedAt) { %>
+
+        <p class="date">
+
+            Solved on:
+            <%= new Date(question.solvedAt).toLocaleDateString() %>
+
+        </p>
+
+    <% } %>
+
+</div>
+
+
+<script>
+
+    function copyCode() {
+
+        const code =
+            document.getElementById("code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        const button =
+            document.getElementById("copyButton");
+
+        button.innerText = "Copied!";
+
+        setTimeout(() => {
+
+            button.innerText = "Copy";
+
+        }, 1500);
+    }
+
+</script>
+
+</body>
+
+</html>
+
